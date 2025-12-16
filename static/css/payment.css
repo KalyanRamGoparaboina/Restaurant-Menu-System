@@ -1,0 +1,376 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background: linear-gradient(90deg, #4a90e2, #50e3c2); /* Gradient background */
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    border-bottom: 4px solid #fff; /* White bottom border */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.nav-logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff; /* White color for logo */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.nav-menu {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+    position: relative;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a.active {
+    background: #fff; /* White background for active link */
+    color: #4a90e2; /* Blue color for active link */
+}
+
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background on hover */
+    color: #4a90e2; /* Blue color on hover */
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.user-details, .payment-methods {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #495057;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+input[type="text"], input[type="email"] {
+    width: calc(100% - 22px); /* Adjust width for padding */
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #4a90e2; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #f1f3f5; /* Light gray on hover */
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-option img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.payment-option:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.payment-option h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.payment-option button {
+    margin-left: auto;
+    padding: 10px 20px;
+    background: #4a90e2; /* Soft blue background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-option button:hover {
+    background: #357abd; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: #28a745; /* Green background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #218838; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* CSS for Food Selection Section */
+#foodSelection {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#foodSelection label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#foodSelection select,
+#foodSelection input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#foodSelection select {
+    margin-bottom: 10px;
+}
+
+#foodSelection button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#foodSelection button:hover {
+    background-color: #218838;
+}
+/* CSS for Order List */
+#orderList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#orderList li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#orderList li:last-child {
+    border-bottom: none;
+}
+
+.order-item {
+    font-size: 1em;
+    color: #333;
+}
+
+.order-item span {
+    font-weight: bold;
+}
+
+#totalCost {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+}
+/* Styling for larger radio buttons */
+input[type="radio"] {
+    width: 25px; /* Increase size */
+    height: 25px; /* Increase size */
+    margin-right: 10px;
+    cursor: pointer;
+    /* Hide default radio appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background: #4a90e2; /* Color of the checked part */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ensure radio buttons align well with labels */
+.payment-option label {
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* Increase font size if needed */
+}
+
+/* Styling for payment options */
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #f1f3f5; /* Light gray on hover */
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.payment-option img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.payment-option:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.payment-option h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Additional styling for other elements as needed */
